@@ -1,0 +1,40 @@
+base_url = "https://Hikaru518.github.io/blog"
+title = "playground 的博客"
+description = "A personal blog"
+build_search_index = false
+generate_feeds = true
+compile_sass = true
+minify_html = true
+taxonomies = [{ name = "tags" }]
+
+theme = "apollo"
+
+[search]
+include_title = true
+include_description = true
+include_path = true
+include_content = true
+index_format = "elasticlunr_json"
+
+[markdown.highlighting]
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+[extra]
+toc = false
+use_cdn = false
+theme = "toggle"
+fancy_code = true
+dynamic_note = true
+mathjax = false
+
+menu = [
+  { name = "博客列表", url = "/posts", weight = 1 },
+  { name = "所有标签", url = "/tags", weight = 2 },
+  { name = "关于我", url = "/about", weight =3 },
+]
+
+socials = []
+
+[extra.analytics]
+enabled = false

@@ -1,0 +1,45 @@
+<script>
+function getUtterancesTheme() {
+    const saved = localStorage.getItem("theme-storage") || "light";
+    if (saved === "dark") return "github-dark";
+    if (saved === "auto") {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? "github-dark" : "github-light";
+    }
+    return "github-light";
+}
+
+function setUtterancesTheme(theme) {
+    const iframe = document.querySelector('.utterances-frame');
+    if (iframe) {
+        iframe.contentWindow.postMessage(
+            { type: 'set-theme', theme: theme },
+            'https://utteranc.es'
+        );
+    }
+}
+
+// Render utterances with the correct initial theme
+const script = document.createElement('script');
+script.src = 'https://utteranc.es/client.js';
+script.setAttribute('repo', 'Hikaru518/blog');
+script.setAttribute('issue-term', 'url');
+script.setAttribute('theme', getUtterancesTheme());
+script.setAttribute('crossorigin', 'anonymous');
+script.async = true;
+document.querySelector('.giscus').appendChild(script);
+
+// Sync theme when Apollo toggles
+const _origToggle = window.toggleTheme;
+window.toggleTheme = function() {
+    _origToggle();
+    setTimeout(() => setUtterancesTheme(getUtterancesTheme()), 50);
+};
+
+// Sync theme when system preference changes (auto mode)
+if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+        setTimeout(() => setUtterancesTheme(getUtterancesTheme()), 50);
+    });
+}
+</script>

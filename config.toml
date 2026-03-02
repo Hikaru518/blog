@@ -34,7 +34,9 @@ menu = [
   { name = "关于我", url = "/about", weight =3 },
 ]
 
-socials = []
+socials = [
+  { name = "rss", url = "https://peiguang.space/atom.xml", icon = "rss" },
+]
 
 [extra.analytics]
 enabled = false

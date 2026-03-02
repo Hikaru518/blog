@@ -29,7 +29,7 @@ comment = true
 
 在这篇文章中，我只打算简单介绍 opencode-config，更详细的内容请看 repo 本身。
 
-我把开发阶段划分为 4 个阶段：
+我把开发阶过程分为 4 个阶段：
  1. Brainstorm 头脑风暴
      - 讨论想法，Agent 会和用户逐步访谈的形式，将一个模糊的想法转化为更具体的产品设计。
  2. 技术设计
@@ -114,4 +114,5 @@ Superpowers 项目的作者 Jesse 尤其推崇用心理学的技巧来提高 Age
 Cursor 在春节之后的一次更新做了一个 [slack integration](https://cursor.com/docs/integrations/slack)，实现了我一开始提到的很多想法。但我还是打算有空实现我的 slack bot。
 
 --
+
 2026 年 3 月 2 日

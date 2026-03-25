@@ -1,5 +1,5 @@
 +++
-title = "Ram：Slack AI agent 开发日志"  
+title = "Ram：Slack AI Agent 的开发日志"  
 date = "2026-03-25"
 
 [taxonomies]

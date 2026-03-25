@@ -22,4 +22,5 @@ path = "about"
 
 # 友站链接
 
-Thrimbda 的博客：[0xc1.space](https://0xc1.space/)
+- Thrimbda 的博客：[0xc1.space](https://0xc1.space/)
+- 张仙客的博客：[zxk.one](https://zxk.one/)
